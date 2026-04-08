@@ -1,0 +1,21 @@
+[
+  {
+    "task": "A product feels cluttered and unfocused.",
+    "selected_persona_mode": "single",
+    "selected_personas": ["Steve Jobs"],
+    "expected_output_shape": "identify what should be removed and restate the product thesis"
+  },
+  {
+    "task": "A hardware/software product has both weak coherence and manufacturing bottlenecks.",
+    "selected_persona_mode": "dual",
+    "selected_personas": ["Steve Jobs", "Elon Musk"],
+    "expected_output_shape": "one section on product coherence, one section on execution constraint, then synthesis"
+  },
+  {
+    "task": "A major product/platform decision affects UX coherence, operating constraints, and long-term organizational quality.",
+    "selected_persona_mode": "panel",
+    "selected_personas": ["Steve Jobs", "Elon Musk", "Charlie Munger"],
+    "expected_output_shape": "Jobs frames the outcome, Musk identifies the constraint, Munger filters judgment risk, then synthesis",
+    "synthesis_required": true
+  }
+]
