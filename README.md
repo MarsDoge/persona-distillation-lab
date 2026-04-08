@@ -16,7 +16,8 @@ persona-distillation-lab/
 ├── docs/
 │   ├── methodology.md
 │   ├── evaluation.md
-│   └── sourcing.md
+│   ├── sourcing.md
+│   └── invocation-protocol.md
 ├── templates/
 │   ├── persona-skill-template.md
 │   ├── research-template.md
@@ -49,6 +50,7 @@ persona-distillation-lab/
 
 - [x] Repo created
 - [x] Initial lab scaffold
-- [ ] Elon Musk source collection
-- [ ] Elon Musk first-pass distillation
+- [x] Invocation protocol added
+- [ ] Elon Musk source collection deepened
+- [ ] Elon Musk first-pass distillation finalized
 - [ ] Evaluation and revision

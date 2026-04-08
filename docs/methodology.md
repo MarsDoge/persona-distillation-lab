@@ -26,7 +26,7 @@ This includes:
 A pattern should only be promoted into the final skill if it passes most of these checks:
 - appears across multiple contexts
 - is predictive on a new problem
-- distinguishes the target from other smart personas
+- distinguishes the target from other strong personas
 - is grounded in source evidence
 
 ## Failure modes to avoid
