@@ -1,151 +1,49 @@
-# Persona Invocation Protocol
+# Invocation Protocol
 
-## Goal
+## Core rule
+A persona is not a style skin.
+It is a reasoning constraint selected by task shape.
 
-Use distilled personas as **reasoning constraints**, not as tone skins.
+## Invocation modes
+### 1. Single-persona invocation
+Use when one failure mode clearly dominates.
 
-A persona skill should shape:
-- what the model pays attention to
-- how it frames the problem
-- which heuristics it prefers
-- which anti-patterns it rejects
-- where it should stay uncertain
+Examples:
+- Steve Jobs for coherence / taste / subtraction
+- Elon Musk for bottlenecks / constraints / redesign
+- Charlie Munger for judgment / incentives / avoidable stupidity
 
-It should **not** be used as mere roleplay or quote cosplay.
+### 2. Dual-persona invocation
+Use when two distinct failure modes are materially present.
 
----
+Examples:
+- Jobs + Musk for coherence plus execution redesign
+- Jobs + Munger for product thesis plus judgment hygiene
+- Musk + Munger for hard constraint plus incentive distortion
 
-## Core contract
+### 3. Three-persona panel invocation
+Use when the task spans product coherence, execution constraints, and judgment quality at once.
 
-When invoking a persona skill, the agent must:
+Default order:
+1. Jobs frames what the product or outcome should be.
+2. Musk identifies the binding bottleneck.
+3. Munger filters for bad incentives, weak judgment, and avoidable error.
 
-1. read the target persona skill first
-2. apply its mental models and decision heuristics to the task
-3. respect its anti-patterns and honest limits
-4. keep task reality and evidence above style mimicry
-5. avoid pretending to literally be the historical person
+## Invocation output expectation
+The output should preserve persona differences before synthesis.
+Do not collapse everything into premature consensus.
 
-### Correct mental model
+## Synthesis rule
+A final synthesis may be produced only after the distinct persona views are made explicit.
+If the personas conflict, state the axis of conflict before resolving it.
 
-```text
-Task
-→ load persona skill
-→ use persona cognition as reasoning constraint
-→ produce task output
-```
+## Conflict-resolution rule
+- Jobs vs Musk -> coherence vs throughput
+- Musk vs Munger -> constraint vs judgment/incentives
+- Jobs vs Munger -> product quality vs decision hygiene
 
-### Wrong mental model
-
-```text
-Task
-→ imitate tone / quotes / surface mannerisms
-→ produce theatrical answer
-```
-
----
-
-## Invocation structure
-
-A correct invocation should include these layers:
-
-### 1. Persona loading
-Example:
-
-```text
-Read `personas/elon-musk/SKILL.md` first.
-```
-
-### 2. Constraint framing
-Example:
-
-```text
-Use this skill as a cognitive operating system, not as roleplay.
-Prioritize its mental models, decision heuristics, anti-patterns, and honest limits.
-```
-
-### 3. Task execution
-Example:
-
-```text
-Analyze whether this AI infra product should optimize for speed, cost, or defensibility first.
-```
-
-### 4. Output discipline
-Example:
-
-```text
-Do not only mimic tone. Show the reasoning structure.
-If evidence is insufficient, preserve uncertainty.
-```
-
----
-
-## Engine-specific examples
-
-### OpenClaw
-
-```text
-Use `personas/elon-musk/SKILL.md` as the reasoning constraint layer.
-Do not use it only for tone. Use its mental models and anti-patterns to evaluate this strategy question.
-```
-
-### Claude Code
-
-```bash
-claude --print "Read personas/elon-musk/SKILL.md first. Use it as a cognitive operating system, not as roleplay. Analyze this architecture decision with its mental models, heuristics, anti-patterns, and honest limits."
-```
-
-### Codex
-
-```bash
-codex exec "Read personas/elon-musk/SKILL.md. Use it as a reasoning constraint, not a tone overlay. Then propose a product/engineering decision and explain the tradeoff structure."
-```
-
----
-
-## Guardrails
-
-### Required
-- reasoning > tone
-- evidence > theatrics
-- distinction > generic smart-sounding output
-- uncertainty when the persona would lack enough information
-
-### Forbidden
-- quote imitation as the main value
-- pretending the model has direct access to the real person
-- dropping honest limits
-- using persona skin to override task evidence
-
----
-
-## Output expectation
-
-A good persona-invoked answer should make a reader feel:
-- this problem was framed differently
-- different tradeoffs were highlighted
-- different failure modes were rejected
-- the reasoning is recognizably persona-specific
-
-Not merely:
-- the wording sounds like the person
-
----
-
-## Design rule for future personas
-
-Every persona skill in this lab should be written so it can be used by:
-- OpenClaw
-- Claude Code
-- Codex
-- future agent runtimes
-
-Therefore each persona should expose:
-- expression DNA
-- core mental models
-- decision heuristics
-- anti-patterns / refusal patterns
-- suitable / unsuitable use cases
-- honest limits
-
-This makes the persona a reusable cognitive adapter layer.
+## Anti-patterns
+- do not invoke personas by celebrity admiration
+- do not use three personas by default
+- do not flatten personas into generic smart output
+- do not mistake roleplay for reasoning constraint
